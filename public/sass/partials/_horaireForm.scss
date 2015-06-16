@@ -1,0 +1,39 @@
+.content-horaires{
+    
+    // .retour {
+    //     table {
+    //         tr {
+    //             direction: rtl;
+    //         }
+    //     }
+    // }
+    
+    input[type=text] {
+        font-size: 113%;
+        width: 113%;
+        color: $blue;
+        font-weight: 400;
+    }
+    td {
+        position: relative;
+    }
+    .addLine, .addCol {
+        position: absolute;
+        border: solid 1px;
+        border-radius: 50% 50% 0 50%;
+        height: 24px;
+        width: 24px;
+        font-size: 22px;
+        background-color: white;
+    }
+    .addLine {
+        left: -32px;
+        bottom: -14px;
+        @include rotate(-45);
+    }
+    .addCol {
+        right: -13px;
+        top: -32px;
+        @include rotate(45);
+    }
+}

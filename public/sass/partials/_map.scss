@@ -1,0 +1,167 @@
+#map{
+    height: 800px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.info-map-container{
+    width: 200px;
+    height: 120px;
+    text-align: center!important;
+}
+
+.info-map-id, .info-map-name, .info-map-horaires{
+    font-size: 18px;
+    display: block;
+    padding-bottom: 8px;
+}
+
+.info-map-direction{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.info-map-horaires{
+    font-size: 14px;
+    padding: none;
+}
+.info-map-id{font-weight: bold;}
+
+.arrets-list{
+    li{
+        cursor: pointer;
+        font-size: 15px;
+        list-style: outside none none;
+        margin-bottom: 8px;
+        padding: 3px 0 2px 2px;
+        clear: both;
+    }
+    li:hover{
+        background-color: $gray;
+    }
+    
+    .resetLignes:hover {
+        background-color: $light-blue;
+    }
+}
+
+// .arrets-list-fullScreen{
+//     margin: auto;
+//     text-align: center;
+//     li{
+//         padding-bottom: 5px;
+//         list-style: none;
+//         display: inline-block;
+        
+//         // height: 50px;
+//         border-radius: 20%;
+        
+//     }
+//     li:hover{
+//         font-weight: bold;
+//     }
+    
+//     .ligne-carre-fullScreen {
+//         width: 20%;
+//         margin: 2px;
+//         color: white;
+//         text-shadow: 0px 0px 3px #000000;
+//     }
+// }
+
+.changeLigne{
+    // padding-left: 25px;
+}
+
+.resetLignes{
+    padding: 10px;
+    margin: auto;
+    background: $blue;
+    color: white;
+    text-align: center;
+    font-family: "Rosario";
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block!important;
+    width: 80%!important;
+}
+
+.resetLignes:hover{
+    background: $light-blue;
+    color: #333333;
+}
+
+.ligne-carre{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    // position: absolute;
+    margin-right: 10px;
+    text-align: center;
+    font-family: "Dosis";
+    color: white;
+    text-shadow: 0px 0px 3px #000000;
+    float: left;
+}
+
+// .ligne-carre-fullscreen{
+//     display: block;
+//     width: 20px;
+//     height: 20px;
+//     position: absolute;
+//     border-radius: 50%;
+// }
+
+
+.map-fullscreen{
+    font-size: 25px;
+    float: right;
+}
+
+.map-fullscreen:hover{
+    cursor: pointer;
+}
+
+.map-logo-overlay{
+    display: block;
+    height: auto;
+    margin: 0 auto 20px;
+    max-width: 80%;
+}
+
+.map-fullscreen-overlay{
+    @include box-sizing(border-box);
+    padding: 5px;
+    position: fixed; 
+    width: 290px;
+    height: 100%; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 200; 
+    font-size: 15px;
+    background: white;
+
+    .ligne-overlay {
+        background-color: #fff;
+        border-radius: 0 5px 5px 0;
+        font-size: 25px;
+        padding: 10px;
+        position: absolute;
+        right: -35px;
+        top: 10px;
+        cursor: pointer;
+    }
+    ul {
+        max-height: 70%;
+        overflow-y: auto;
+    }
+    
+    // .changeLigne{
+    //     font-size: 30px;
+    // }
+    
+    
+}
+

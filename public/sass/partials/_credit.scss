@@ -1,0 +1,26 @@
+.block-credit {
+    padding: 0 60px;
+    
+    ul {
+        margin-top: 30px;
+        position: relative;
+        list-style-type: none;
+        
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin: 10px;
+            
+             span {
+                 position: absolute;
+                 vertical-align: middle;
+                 top: 15px;
+                 padding-left: 15px;
+             }
+            
+            img {
+                width: 50px;
+            }
+        }
+    }
+}

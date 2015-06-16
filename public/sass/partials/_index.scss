@@ -1,0 +1,465 @@
+.block-navigation {
+    background-color: $blue;
+    height: 370px;
+    width: 100%;
+    @include box-sizing(border-box);
+    padding: 10px 10px 10px 0px;
+    position: relative;
+    display: block;
+    @media screen and (max-width: $width-phone-version) {
+       display: none;
+    }
+    
+
+    
+    .block-navigation-nav {
+        float: left;
+        width: 125px;
+        @media screen and (max-width: $width-base) {
+            width: 70px;
+        }
+        height: 100%;
+        display: inline-block;
+        
+        .block-cat {
+            position: relative;
+            @include box-sizing(border-box);
+            color: white;
+            background-color: $blue;
+            height: 25%;
+            text-transform : uppercase;
+            font-family: "Dosis";
+            font-weight: 300;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            
+            @include transition(all, 0.2s, ease-in-out);
+            
+            i {
+                font-size: 32px;
+            }
+            
+            @media screen and (max-width: $width-base) {
+                div {
+                    display: none;
+                }
+            }
+        }
+        
+        
+        .block-cat:hover, .active {
+            cursor: pointer;
+            position: relative;
+            color: $blue;
+            background-color: white;
+        }
+        
+        .block-cat:after{
+            left: 100%;
+        	top: 50%;
+        	border: solid transparent;
+        	content: " ";
+        	height: 0;
+        	width: 0;
+        	position: absolute;
+        	border-left-color: transparent;
+        	border-width: 43px;
+        	margin-top: -43px;
+        }
+        
+        .block-cat:hover:after, .active:after {
+            left: 100%;
+        	top: 50%;
+        	border: solid transparent;
+        	content: " ";
+        	height: 0;
+        	width: 0;
+        	position: absolute;
+        	border-left-color: white;
+        	border-width: 43px;
+        	margin-top: -43px;
+        	z-index: 5;
+        }
+        
+        .block-cat:after, .active:after {
+            @include transition(border-color, 0.2s, ease-in-out);
+        }
+    }
+    
+    .block-navigation-content {
+        height: 100%;
+        position: relative;
+        margin-left: 125px;
+        @media screen and (max-width: $width-base) {
+            margin-left: 70px;
+        }
+        background-color: $light-blue;
+        
+        input[type=submit] {
+            padding: 5px 20px;
+            font-size: 20px;
+            font-family: "Dosis";
+            font-weight: 100;
+            text-transform: uppercase;
+            background-color: $dark-blue;
+            color: white;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -70px;
+            cursor: pointer;
+        }
+        
+        #appli-index {
+            background-color: rgba(255, 255, 255, 0.8);
+            @include border-radius(20px, 0px, 0px, 0px);
+            bottom: 0;
+            font-size: 16px;
+            padding: 10px 10px 5px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            width: 200px;
+            z-index: 10;
+
+            img {
+                margin-top: 5px;
+                width: 50px;
+            }
+            
+            .first-link {
+                margin-right: 7px;
+            }
+        }
+
+        .block-navigation-inset {
+            visibility: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 4;
+            // overflow: hidden;
+            
+            .button-search[value~="itinéraire"] {
+                display: block;
+                height: auto;
+                left: 0;
+                margin: -30px auto;
+                position: relative;
+            }
+            
+            h3 {
+                text-align: center;
+                padding: 7px 0px;
+                background-color: $gray;
+                text-transform: uppercase;
+                font-size: 23px;
+                font-family: "Dosis";
+                font-weight: 100;
+            }
+            
+            .first-block {
+                border-right: 1px solid $blue;
+            }
+            
+            .block-search.search-itineraire {
+                height: auto;
+                margin: 7% auto;
+                padding: 10px 30px 20px 40px;
+                
+                label {
+                    font-size: 22px;
+                }
+            }
+            
+            #map {
+                height: 307px;
+            }
+            
+            .block-search {
+                @include box-sizing(border-box);
+                position: relative;
+                display: inline-block;
+                padding: 10px 40px 20px 40px;
+                margin: 10px 0;
+                width: 49.5%;
+                height: 285px;
+                
+                i {
+                    font-size: 22px;
+                }
+                
+                
+                label {
+                    font-size: 18px;
+                }
+                input[type=text] {
+                    padding: 5px;
+                    margin: 2px 0;
+                    font-size: 18px;
+                    width: 90%;
+                }
+                select {
+                    font-size: 18px;
+                    padding: 5px;
+                }
+                
+                
+                
+                .block-search-input {
+                    margin-top: 27px;
+                    span {
+                        width: 100%
+                    }
+                    input {
+                        width: 90%;
+                    }
+                }
+                
+                .block-select-date {
+                    margin-top: 50px;
+                    @media screen and (max-width: 891px) {
+                        margin-top: 15px;
+                    }
+                    div {
+                        display: inline-block;
+                        width: 150px;
+                        
+                        input {
+                            width: 100px;
+                        }
+                    }
+                    
+                    .gldp-flatwhite {
+                        
+                        div {
+                            margin-bottom: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+        //--------------------------------------------------
+        //                                                 -
+        //                    SLIDER                       -
+        //                                                 -
+        //--------------------------------------------------
+        .home {
+            position: relative; 
+            overflow: hidden; 
+            width: 100%;
+            ul {
+                list-style: none;
+                height: 100%;
+                li { 
+                    height: 100%;
+                    float: left;
+                    background-size: auto 370px;
+                    background-repeat: no-repeat;
+                }
+            }
+            
+            ol {
+                list-style: none;
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                bottom: 10px;
+                li {
+                    display: inline-block;
+                    border: 2px solid $blue;
+                    border-radius: 10px;
+                    font-size: 0px;
+                    width: 10px;
+                    height: 10px;;
+                    margin: 2px;
+                }
+                .active {
+                    background-color: white;
+                }
+            }
+            
+        }
+        
+        .active {
+            visibility: visible;
+        }
+    }
+}
+
+.block-infos {
+    height: 380px;
+    position: relative;
+    clear: left;
+    @media screen and (max-width: $width-tablet-version) {
+        height: 100%;
+    }
+    width: 100%;
+    @include box-sizing(border-box);
+    
+    .block-trafic, .block-actu {
+        width: 48%;
+        height: auto;
+        margin: 1%;
+        float: left;
+        display: inline-block;
+        @media screen and (max-width: $width-tablet-version+1) {
+            float: none;
+            width: auto;
+            height: auto;
+            position: relative;
+
+        }
+        @include box-sizing(border-box);
+        
+        h2 {
+            margin: 0;
+            padding-left: 10px;
+            font-family: "Dosis";
+            font-weight: 200;
+            font-size: 25px;
+            color: $green;
+            border-bottom: 1px solid $green;
+        }
+        div {
+            position: relative;
+            @include box-sizing(border-box);
+            min-height: 150px;
+            padding: 10px 20px;
+            margin-bottom: 1px;
+            background-color: $gray;
+            
+            h3 {
+                margin: 0;
+                padding-bottom: 4px;
+            
+                a {
+                    color: $green;
+                    font-weight: 100;
+                    font-size: 18px;
+                }
+                
+                a:visited {
+                    color: $dark-green;
+                }
+                
+                a:active {
+                    color: $light-green;
+                }
+            }
+            
+            P {
+                margin-bottom: 20px;
+                font-size: 16px;
+                height: 60%;
+                text-align: justify;
+            }
+            
+            span {
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+                color: $dark-green;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+//--------------------------------------------------
+//                  BOUTONS MOBILE                 -
+//--------------------------------------------------
+
+#mob_content {
+    clear: both;
+    font-family: "Dosis",sans-serif;
+    text-transform: uppercase;
+    
+    #download_buttons {
+        background-color: #ecf0f1;
+        display: block;
+        font-size: 160%;
+        font-weight: 300;
+        min-height: 101px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        
+        @media screen and (max-width: 362px) {
+            text-align: center;   
+        }
+        
+        a {
+            display: inline-block;
+            height: 90px;
+            margin: 6px;
+            width: 90px;
+
+            img {
+                width: 100%;
+            }
+        }
+        
+        span {
+            position: absolute;
+            top: 26%;
+            @media screen and (max-width: 362px) {
+                 position: relative;
+                 display: block;
+            }
+            
+        }
+    }
+    
+    .mob_button {
+        color: #fff;
+        float: left;
+        font-size: 114%;
+        padding: 1%;
+        text-align: center;
+        width: 47%;
+        position: relative;
+        
+        @media screen and (max-width: 400px) {
+            width: 100%;
+            text-align: left;
+            font-size: 150%;
+            
+            span {
+                position: absolute;
+                top: 25%;
+            }
+            
+        }
+        
+        img {
+            width: 70%;
+            @media screen and (max-width: 400px) {
+                margin-right: 10px;
+                vertical-align: middle;
+                width: 35%;
+                float: left;
+            }
+        }
+    }
+    
+    #button_path {
+        background-color: #3b5281;
+        margin: 0 0 10px 1%;
+        @media screen and (max-width: 400px) {
+            margin: 0 0 10px;
+        }
+    }
+    
+    #button_time {
+        background-color: #00A1D2;
+        margin: 0 1% 10px 0;
+        @media screen and (max-width: 400px) {
+            margin: 0 0 10px;
+        }
+    }
+    
+}

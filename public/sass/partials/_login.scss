@@ -1,0 +1,59 @@
+ #login-block {
+    background-color: $gray;
+    border: 1px solid $dark-blue;
+    border-radius: 10px;
+    margin: 10% auto;
+    overflow: hidden;
+    padding: 20px;
+    width: 450px;
+    
+    @media screen and (max-width: $width-phone-version) {
+        width: 85%;
+    }
+    
+    p {
+        background-color: $semi-dark-green;
+        color: #fff;
+        font-family: 'dosis', sans-serif;
+        font-size: 31px;
+        margin: -20px -20px 24px;
+        padding: 20px 20px 5px;
+        text-align: center;
+        text-transform: uppercase;
+        
+        @media screen and (max-width: $width-phone-version) {
+            font-size: 25px;
+        }
+        
+    }
+    
+    form {
+        
+        label {
+            font-size: 22px;
+        }
+        
+        input {
+            border: 1px solid $dark-gray;
+            border-radius: 5px;
+            color: #000;
+            font-size: 22px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            padding: 10px;
+            width: 97%;
+        }
+        
+        input[type="submit"] {
+            background-color: $light-green;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: $semi-dark-green;
+        }
+        
+    }
+    
+}

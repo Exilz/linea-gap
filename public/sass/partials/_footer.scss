@@ -1,0 +1,167 @@
+$height-footer: 265px;
+$height-footer-tablet-version: 485px;
+$height-footer-phone-version: 725px;
+
+
+footer {
+    @include box-sizing(content-box);
+    height: $height-footer;
+    @media screen and (max-width: $width-tablet-version) {
+        height: $height-footer-tablet-version;
+    }
+    @media screen and (max-width: $width-phone-version) {
+        height: $height-footer-phone-version;
+    }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    .content-footer {
+        clear: both;
+        @include box-sizing(border-box);
+        height: $height-footer - 15px;
+        @media screen and (max-width: $width-tablet-version) {
+            height: $height-footer-tablet-version - 15px;
+        }
+        @media screen and (max-width: $width-phone-version) {
+            height: $height-footer-phone-version - 15px;
+        }
+        padding: 20px 15px;
+        background-color: $green;
+        
+        #block-infos {
+            margin: 0px 2%;
+            float: center;
+            @media screen and (max-width: $width-tablet-version) {
+                float: right;
+                margin: 0px 0px 0px 1%;
+            }
+            @media screen and (max-width: $width-phone-version) {
+                float: none;
+                margin-bottom: 15px;
+            }
+        }
+        
+        #block-contact {
+            float: right;
+            @media screen and (max-width: $width-tablet-version) {
+                width: 100%;
+            }
+            
+            #accesform {
+                background-color: $semi-dark-green;
+                display: block;
+                margin: 10px auto;
+                padding: 5px 15px;
+                text-align: center;
+            }
+        }
+        
+        .block-footer {
+            @include box-sizing(border-box);
+            height: 210px;
+            width: 32%;
+            @media screen and (max-width: $width-tablet-version) {
+                width: 49%;
+                margin-bottom: 15px;
+            }
+            @media screen and (max-width: $width-phone-version) {
+                width: 100%;
+            }
+            display: inline-block;
+            float: left;
+            position: relative;
+            padding: 8px 12px;
+            background-color: $light-green;
+            
+            h4 {
+                margin: 0;
+                color: white;
+                text-transform : uppercase;
+                font-family: "Dosis";
+                font-weight: 200;
+                border-bottom: 1px solid $gray;
+            }
+            
+            ul, p {
+                list-style-type: none;
+                margin: 0;
+                padding: 5px 15px;
+                
+                li {
+                    padding: 2px 0px;
+                    
+                    a {
+                        color: white;
+                    }
+                }
+                
+                
+            }
+            
+            p, a {
+                color: white;
+            }
+            
+            a:hover, a:focus {
+                text-decoration: underline;
+            }
+            
+            textarea {
+                height: 65px;
+                resize: none;
+                font-family:"Rosario";
+                font-weight: 100;
+            }
+        
+            
+            input[type=text] {
+                border: 0;
+                padding: 2px;
+                margin: 10px 0px 0px 5px;
+                min-width: 170px;
+                width: 65%;
+                font-family:"Rosario";
+                font-weight: 100;
+                padding-left: 5px;
+            }
+            textarea {
+                border: 0;
+                padding: 2px;
+                margin: 10px 0px 0px 5px;
+                width: 94%;
+                padding-left: 5px;
+                font-size: 13px;
+                height: 60px;
+            }
+            
+            input[type=submit] {
+                background-color: $dark-green;
+                color: $gray;
+                text-transform : uppercase;
+                font-family: "Dosis";
+                font-weight: 200;
+                border: 0;
+                font-size: 15px;
+                padding: 2px 13px;
+                position: absolute;
+                left: 35%;
+                bottom: 10px;
+            }
+        }
+        
+    }
+    
+    .legal-notice {
+        height: 15px;
+        color: $green;
+        font-size: 12px;
+        text-align: center;
+        a {
+            color: $green;
+            padding: 0 10px;
+            font-family: "Dosis";
+            font-weight: 200;
+        }
+    }
+}

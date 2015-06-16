@@ -1,0 +1,78 @@
+.block-content {
+    .block-lieu {
+        cursor: pointer;
+        border-bottom: 1px solid $border-blue;
+        padding: 10px 15px;
+        
+        h2 {
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        .nomLieu {
+            cursor: pointer;
+            line-height: 30px;
+            margin-left: 50px;
+        }
+        
+        .nomLieu:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .block-lieu:hover {
+        background: $light-blue-second;
+    }
+    
+    #popup {
+        position: absolute;
+        height: 600px;
+        width: 600px;
+        left: 50%;
+        margin-left: -300px;
+        @include border-radius(5px, 5px, 5px, 5px);
+        box-shadow: 0 6px 10px #ababab;
+        border: 10px solid #fff;
+        
+        @media screen and (max-width: $width-tablet-version) {
+            height: 400px;
+        }
+        @media screen and (max-width: $width-phone-version) {
+            width: 100%;
+            left: 0;
+            margin-left: 0;
+        }
+        
+        z-index: 5;
+        display: none;
+        #map-lieu{
+            height: 100%;
+            width: 100%;
+        }
+        
+        i {
+            position: absolute;
+            top: -29px;
+            right: -24px;
+            font-size: 28px;
+            z-index: 4;
+            cursor: pointer;
+            @include border-radius(45px, 45px, 45px, 45px);
+            background-color: white;
+            padding: 8px;
+        }
+        span {
+            position: absolute;
+            bottom: 0;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            background: rgba(240, 240, 240, 0.8);
+            font-style: "Dosis";
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+    
+}

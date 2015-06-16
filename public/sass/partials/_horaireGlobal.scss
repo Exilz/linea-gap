@@ -1,0 +1,148 @@
+.content-horaires{
+    padding: 20px;
+    h1 {
+        font-family: "Dosis";
+        font-weight: 300;
+        font-size: 25px;
+        border-bottom: 1px solid $dark-blue;
+        text-transform : uppercase;
+        margin-bottom: 15px;
+    }
+    
+    table{
+        border: 0;
+        border-spacing: 0;
+        
+        thead:after {
+            line-height: 30px;
+            content: "-";
+            color: transparent; /* to hide text */
+            display: block;
+            width: 0;
+        }
+        
+        
+        tr:nth-child(even){
+            background: #ecf0f1;
+        }
+        
+        tr{
+            max-height: 42px;
+            margin-left: 40px;
+        }
+        
+        tr:hover{
+            background: #D2D2D2;
+            td{
+                border: 1px solid #D2D2D2;
+            }
+        }
+        
+        .arret{
+            padding: 10px;
+            color: $dark-blue;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+            border: none;
+            letter-spacing: -1px;
+            @media screen and (max-width: $width-phone-version) {
+                font-weight: normal;
+                font-size: 15px;
+                padding: 10px 0;
+            }
+            
+        }
+        
+        td{
+            border: 1px solid #ddd;
+            padding: 10px 13px;
+            font-size: 113%;
+            text-align: center;
+            @media screen and (max-width: $width-phone-version) {
+                font-size: 90%;
+                padding: 9px 5px;
+            }
+        }
+        
+        
+    }
+    
+    .fixedTopNav{
+        position:fixed;
+        top:0;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 100;
+        width: 100%;
+        margin-left: -20px;
+        
+        .scrollLeft, .scrollRight, .changeDirection, .changeLigne{
+            opacity: 0.6;
+        }
+        
+    }
+    
+    .fixedTopNav:hover{
+        .scrollLeft, .scrollRight, .changeDirection, .changeLigne{
+            opacity: 1;
+        }
+    }
+    
+    .aller, .retour{
+        overflow: hidden;
+        margin: auto;
+        border-right: 1px solid #ddd;
+        margin-left: 190px;
+        @media screen and (max-width: $width-phone-version) {
+            overflow: auto;
+            margin-left: 154px;
+        }
+    }
+}
+
+.selected{
+    background: $blue!important;
+    color: white;
+    font-weight: bold;
+}
+
+.title-first-arret{
+    margin-right: 20px;
+}
+
+.first-arret{
+    margin-bottom: 20px;
+}
+
+.navigation{
+    margin: 40px auto 0px;
+    line-height: 20px;
+    text-align: center;
+    
+    .scrollLeft, .scrollRight, .changeDirection, .changeLigne{
+        display: inline-block;
+        height: 35px;
+        font-weight: 300;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    
+    .changeLigne, .changeDirection{
+        background-color: $blue;
+        color: white;
+        line-height: 35px;
+    }
+    
+    .scrollRight, .scrollLeft{
+        background: $light-blue;
+        font-size: 130%;
+        line-height: 30px;
+        color: $blue;
+    }
+    
+    .scrollRight:hover, .scrollLeft:hover {
+        background-color: $dark-blue-second;
+        color: white;
+    }
+}

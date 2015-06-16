@@ -1,0 +1,85 @@
+@import "modules/font-awesome.min";
+// @import "modules/glDatePicker.default";
+@import "modules/glDatePicker.flatwhite";
+@import "modules/jquery-ui.min";
+
+@import "modules/font";
+@import "modules/colors";
+@import "modules/mixins";
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/all";
+
+
+
+@import "partials/faq";
+@import "partials/autocomplete";
+@import "partials/map";
+@import "partials/horaires";
+@import "partials/horaireGlobal";
+@import "partials/header";
+@import "partials/flashMessage";
+@import "partials/index";
+@import "partials/footer";
+@import "partials/contentType";
+@import "partials/credit";
+@import "partials/lieu";
+@import "partials/liensutiles";
+@import "partials/login";
+@import "partials/signup";
+@import "partials/pagesrecherches";
+
+
+.content{
+    padding-bottom: $height-footer;
+    @media screen and (max-width: $width-tablet-version) {
+         padding-bottom: $height-footer-tablet-version;
+    }
+    @media screen and (max-width: $width-phone-version) {
+         padding-bottom: $height-footer-phone-version;
+    }
+    
+}
+
+.banner{
+    width: 100%;
+}
+
+.front-title{
+    font-size: 40px;
+    text-align: center;
+}
+
+.front-title-second{
+    margin-top: 50px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.desc, .list-desc{
+    padding: 15px 0px 15px 25px;
+    font-style: italic;
+    clear: both;
+}
+
+.desc{
+    padding: 15px 20px 15px 20px;
+    font-style: initial;
+}
+    
+.front-list-items{
+    list-style: none;
+    a{
+        color: $semi-dark-green;
+    }
+    a:visited{
+        color: $dark-green;
+    }
+    .list-title{
+        font-size: 20px;
+    }
+}
+
+.block-padding {
+    padding: 5px 20px;
+}

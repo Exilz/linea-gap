@@ -1,0 +1,98 @@
+#page-search {
+    
+    background-color: $light-blue;
+    margin: 2%;
+    padding: 0.5%;
+    
+    .block-search:first-child {
+        border-right: 1px solid $blue;
+        
+        @media screen and (max-width: $width-phone-version) {
+            border-right: none;
+            border-bottom: 1px solid $blue;
+        }
+    }
+    
+    .block-search {
+        @include box-sizing(border-box);
+        position: relative;
+        display: inline-block;
+        padding: 0px 20px 10px 20px;
+        margin: 10px 0;
+        width: 49.5%;
+        
+        @media screen and (max-width: $width-phone-version) {
+            width: 100%;
+            display: block;
+            padding: 10px 20px 20px;
+        }
+
+        i {
+            font-size: 22px;
+        }
+        
+        
+        label {
+            font-size: 18px;
+        }
+        input[type=text] {
+            padding: 5px;
+            margin: 2px 0;
+            font-size: 18px;
+            width: 90%;
+        }
+        
+        span {
+            width: 100%
+        }
+        
+        select {
+            font-size: 18px;
+            padding: 5px;
+        }
+        
+        .block-search-input {
+            margin-top: 27px;
+            @media screen and (max-width: $width-phone-version) {
+                margin-top: 0;
+            }
+            span {
+                width: 100%
+            }
+            input {
+                width: 90%;
+            }
+        }
+        
+        .block-select-date {
+            margin-top: 35px;
+            @media screen and (max-width: 891px) {
+                margin-top: 15px;
+            }
+            div {
+                display: inline-block;
+                width: 150px;
+                
+                input {
+                    width: 100px;
+                }
+            }
+        }
+ 
+    }
+    
+    input[type=submit] {
+        background-color: #34495e;
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-family: "Dosis";
+        font-size: 20px;
+        font-weight: 100;
+        margin: 10px auto;
+        padding: 5px 20px;
+        position: initial;
+        text-transform: uppercase;
+    }
+    
+}

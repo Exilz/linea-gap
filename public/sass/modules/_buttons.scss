@@ -1,0 +1,95 @@
+.button{
+    color: white;
+    border-radius: 5px;
+    font-weight: 300;
+    font-family: "Dosis";
+    font-size: 20px;
+    line-height: 40px;
+    padding: 15px 15px 10px 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.button:hover{
+    text-decoration: underline;
+}
+
+.button:after{
+    font-family: "FontAwesome";
+    position: absolute;
+    font-size: 40px;
+    left: 20px;
+    line-height: 40px;
+}
+
+.button-new, .button-submit{
+    border: 1px solid $dark-green;
+    background: $semi-dark-green;
+}
+
+.button-new:after{
+    content: "\f196";
+}
+
+.button-classic{
+    border: 1px solid $dark-gray;
+    background: $gray;
+    color: black;
+}
+
+.button-close{
+    border: 1px solid $dark-gray;
+    background: $gray;
+    color: black;
+}
+
+.button-delete{
+    border: 1px solid $dark-red;
+    background: $red;
+}
+
+.button-delete-small{
+    position: absolute;
+    right: 35%;
+    color: $red;
+}
+
+.button-delete:after{
+    content: "\f00d";
+}
+
+.button-delete:hover{
+    background: $dark-red;
+}
+
+.button-new:hover, .button-submit:hover{
+    background: $dark-green;
+}
+
+.button-classic:hover, .button-close:hover{
+    background: $dark-gray;
+}
+
+.button-submit, .button-classic, .button-delete{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.button-submit:after, .button-classic:after{
+    content: "\f00c";
+    font-size: 35px;
+}
+
+.button-close:after{
+    content: "\f00d";
+    font-size: 35px;   
+}
+
+.g-recaptcha {
+    margin: 15px 0px;
+    div{
+        div{
+            margin: 0 auto;
+        }
+    }
+}

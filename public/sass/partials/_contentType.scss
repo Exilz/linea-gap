@@ -1,0 +1,390 @@
+ .content-type {
+    @include box-sizing(border-box);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+    .block-content, .block-right {
+        display: inline-block;
+        margin: 1%;
+        min-height: 800px;
+        @media screen and (max-width: $width-tablet-version) {
+            min-height: 0;
+        }
+    }
+    
+    .block-content {
+        position: relative;
+        width: 67%;
+        overflow: hidden;
+        @include box-sizing(border-box);
+        padding: 10px 20px 20px 20px;
+        @media screen and (max-width: $width-tablet-version) {
+            width: 100%;
+            margin: 0;
+            padding: 40px;
+        }
+        background-color: $gray;
+        
+        
+        
+        h1 {
+            font-family: "Dosis";
+            font-weight: 300;
+            font-size: 25px;
+            border-bottom: 1px solid $dark-blue;
+            text-transform : uppercase;
+            margin-bottom: 15px;
+        }
+        
+        div, p {
+            text-align: justify;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        
+        ul {
+            font-size: 18px;
+            margin-left: 25px;
+             li {
+                 padding: 10px 0;
+             }
+        }
+    }
+
+    .block-right {
+        @include box-sizing(border-box);
+        width: 29%;
+        position: absolute;
+        @media screen and (max-width: $width-tablet-version) {
+            position: relative;
+            width: 100%;
+            margin: 0;
+        }
+        
+        .block-search {
+            @include box-sizing(border-box);
+            background-color: $blue;
+            color: white;
+            position: relative;
+            width: 100%;
+            @media screen and (max-width: $width-tablet-version) {
+                margin: 25px 0;
+            }
+            
+            #block-search-horaire, #block-search-itiniraire {
+                padding: 10px 20px;
+            }
+            #block-search-itiniraire {
+                display: none;
+            }
+            
+            h3 {
+                @include box-sizing(border-box);
+                padding: 10px 20px 5px;
+                width: 100%;
+                font-family: "Dosis";
+                font-weight: 200;
+                font-size: 18px;
+                background-color: $dark-blue;
+            }
+            h3:hover {
+                background-color: $dark-blue-second;
+            }
+            
+            label {
+                font-size: 12px;
+            }
+            
+            span {
+                width: 100%;
+            }
+            input {
+                padding: 3px;
+                width: 90%;
+            }
+            
+            input[type=submit], .button-search {
+                font-family: "Dosis";
+                font-weight: 100;
+                background-color: $dark-blue;
+                color: white;
+                padding: 2px 20px;
+            }
+            
+            input[type=submit] {
+                width: 100%;
+            }
+            
+            div {
+                position: relative;
+                margin-bottom: 10px;
+                
+                .button-search {
+                    width: auto;
+                    position: absolute;
+                    padding: 3px 3px;
+                    top: 0;
+                    left: 92%;
+                    // @media screen and (max-width: $width-tablet-version) {
+                    //     left: 222px;
+                    // }
+                    
+                    @media screen and (max-width:  $width-phone-version) {
+                        left: auto;
+                        right: -6px;
+                    }
+                }
+                
+                
+            }
+            
+            .block-select-date {
+                position: relative;
+                width: 100%;
+                
+                div{
+                    display: inline-block;
+                    width: 49%;
+                    
+                    input[type=text] {
+                        width: 56px;
+                    }
+                }
+            }
+            
+            .block-search-input, .block-select-date {
+                @media screen and (max-width: $width-tablet-version) {
+                    display: inline-block;
+                    width: 49%;
+                }
+                
+                @media screen and (max-width:  $width-phone-version) {
+                    display: block;
+                    width: 100%;
+                    
+                    input[type=text] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+        
+        
+        .block-last-infos {
+            background-color: $gray;
+            position: relative;
+            margin: 25px 0;
+            
+            @media screen and (max-width: $width-tablet-version) {
+                float: left;
+                margin-right: 20px;
+                width: 49%;
+            }
+            
+            @media screen and (max-width:  $width-phone-version) {
+                width: auto;
+                margin-right: 0px;
+                float: none;
+            }
+            
+            .block-title {
+                position: relative;
+                @include box-sizing(border-box);
+                border-bottom: 3px solid $green;
+                height: 39px;
+                
+                h2 {
+                    position: absolute;
+                    margin: 0;
+                    display: inline-block;
+                    font-family: "Dosis";
+                    font-weight: 200;
+                    font-size: 25px;
+                    color: $green;
+                    cursor: pointer;
+                    text-align: center;
+                    @include box-sizing(border-box);
+                    width: 45%;
+                    @media screen and (max-width: $width-tablet-version) {
+                        width: 47%;
+                    }
+                    z-index: 3;
+                    padding: 2px 0px 2px 1%;
+                }
+                
+                h2.active {
+                    color: $gray;
+                    background-color: $green;
+                }
+                
+               
+                
+                h2.active.infos-trafic:after {
+                    z-index: -1;
+                    right: -36px;
+                	bottom: 0;
+                	border: solid transparent;
+                	content: " ";
+                	height: 0;
+                	width: 0;
+                	position: absolute;
+                	border-bottom-color: $green;
+                	border-width: 36px;
+                	
+                }
+                
+                h2.infos-actu {
+                    right: 0;
+                    padding: 2px 1% 2px 0px;
+                }
+                
+                h2.active.infos-actu:after {
+                    z-index: -1;
+                    left: -36px;
+                    top: 0;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    border-top-color: $green;
+                    border-width: 36px;
+                	
+                }
+            }
+            
+            .infos-actu {
+                display: none;
+            }
+            
+            div.active {
+                display: block;
+            }
+            
+            .infos-trafic, .infos-actu {
+                padding: 10px 15px;
+                display: none;
+                
+                
+                h3 {
+                    padding-bottom: 4px;
+                
+                    a {
+                        color: $green;
+                        font-weight: 100;
+                        font-size: 18px;
+                        background-color: transparent;
+                        padding: 0;
+                        margin: 0;
+                        display: inline;
+                    }
+                    
+                    a:visited {
+                        color: $dark-green;
+                    }
+                    
+                    a:active {
+                        color: $light-green;
+                    }
+                }
+                
+                P {
+                    font-size: 16px;
+                    height: 60%;
+                    min-height: 120px;
+                    text-align: justify;
+                    margin-bottom: 35px;
+                }
+                
+                span {
+                    position: absolute;
+                    bottom: 40px;
+                    right: 20px;
+                    color: $dark-green;
+                    font-size: 12px;
+                }
+                
+                a {
+                    text-align: center;
+                    padding: 2px 0px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    display: block;
+                    color: white;
+                    background-color: $green;
+                }
+            }
+        }
+        
+        .block-download {
+            max-width: 330px;
+            
+            @media screen and (max-width: $width-tablet-version) {
+                position: absolute;
+                top: 204px;
+                right: 0;
+            }
+            
+            @media screen and (max-width: $width-tablet-version) {
+                float: right;
+                margin-top: 19px;
+                max-width: -moz-available;
+                position: relative;
+                right: auto;
+                top: auto;
+                width: 48%;
+            }
+            
+            @media screen and (max-width: $width-phone-version) {
+                float: none;
+                max-width: none;
+                position: relative;
+                text-align: left;
+                width: auto;
+                margin-bottom: 10px;
+                
+                a {
+                    margin: 0 10px;
+                }
+            }
+            
+            h2 {
+                font-family: "Dosis";
+                font-weight: 200;
+                font-size: 25px;
+                color: $green;
+                border-bottom: 3px solid $green;
+            }
+            
+            div {
+                
+                background-color: $gray;
+                margin-left: 0;
+                margin-right: 0;
+                text-align: center;
+                font-size: 14px;
+                padding-bottom: 10px;
+            
+                .google-app, .appel-app {
+                    display: inline-block;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                }
+                
+                .google-app {
+                    width: 118px;
+                }
+                
+                .appel-app {
+                    width: 135px;
+                }
+            }
+        }
+    }
+}

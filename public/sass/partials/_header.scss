@@ -1,0 +1,304 @@
+header {
+    @include box-sizing(content-box);
+    position: relative;
+    height: 110px;
+    background-color: transparent;
+    @media screen and (max-width: $width-base - 1px) {
+        margin-bottom: 75px;
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        float: left;
+        width: 200px;
+        height: auto;
+        padding-left: 15px;
+        padding-top: 5px;
+        @media screen and (max-width: $width-base - 1px) {
+            float: none;
+        }
+        @media screen and (max-width: $width-tablet-version) {
+            margin: 0;
+            display: block;
+            height: 100px;
+            width: auto;
+            padding-top: 0;
+        }
+        @media screen and (max-width: $width-phone-version) {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    
+    nav {
+        position: absolute;
+        @media screen and (min-width: $width-base) {
+            position: relative;
+            float: right;
+            padding-right: 140px;
+            margin-top: 25px;
+        }
+        @media screen and (max-width: $width-base - 1px) {
+            float: none;
+            background-color: $gray;
+            position: relative;
+            top: 102px;
+            left: 0;
+            line-height: 52px;
+        }
+
+        #menu_dropdown {
+            display: none;
+            
+            @media screen and (max-width: $width-phone-version) {
+                display: inline;
+                text-transform: uppercase;
+                padding: 15px;
+                font-size: 24px;
+                font-family: 'Dosis', sans-serif;
+                font-weight: 200;
+                cursor: pointer;
+ 
+            }
+            
+            
+            
+        }
+        
+        ul {
+            display: inline-block;
+            list-style-type: none;
+            @media screen and (max-width: $width-phone-version) {
+                line-height: 66px;
+                display: none;
+                position: relative;
+                z-index: 100;
+                background-color: $dark-blue-second;
+            }
+            
+            li {
+                display: inline-block;
+                position: relative;
+                
+                @media screen and (max-width: $width-base - 1px) {
+                    line-height: normal;
+                }
+                
+                @media screen and (max-width: $width-phone-version) {
+                    display: block;
+                }
+                
+                a {
+                    font-family: "Dosis";
+                    font-weight: 200;
+                    font-size: 20px;
+                    
+                    text-transform : uppercase;
+                    padding: 25px 14px 15px;
+                    color: $dark-blue;
+                    
+                    @include transition(all, 0.2s, ease-in-out);
+                    
+                    span {
+                            display: none;
+                    }
+
+                    @media screen and (max-width: $width-base - 1px) {
+                        padding: 12px 12px 16px;
+                        font-size: 18px;
+                    }
+                    
+                    @media screen and (max-width: $width-phone-version) {
+                        color: #fff;
+                        padding: 5px 0px;
+                        display: block;
+                        padding-left: 30px;
+                    }
+                    
+                    i {
+                        padding-right: 5px;
+                    }
+                    
+                }
+                
+                a.drop, a.icon {
+                    padding-right: 0px;
+                }
+                
+                a:hover {
+                    color: white;
+                    background-color: $dark-blue;
+                    border-bottom: 8px solid $dark-blue-second;
+                    
+                    @media screen and (max-width: $width-phone-version) {
+                        border: 0;
+                    }
+                    
+                }
+                
+                .active {
+                    color: white;
+                    background-color: $dark-blue;
+                    border-bottom: 8px solid $dark-blue-second;
+                    
+                    @media screen and (max-width: $width-phone-version) {
+                        border: 0;
+                    }
+                    
+                }
+                
+                ul {
+                    @include box-sizing(border-box);
+                    width: 100%;
+                    z-index: 6;
+                    position: absolute;
+                    top: 41px;
+                    display: none;
+                    background-color: $dark-blue-second;
+                    
+                    @media screen and (max-width: $width-phone-version) {
+                        top: 32px;
+                        background-color: $blue;
+                        position: relative;
+                        top: 0;
+                    }
+                    
+                    li {
+                        display: block;
+                        width: 100%;
+                        
+                        a {
+                            @include box-sizing(border-box);
+                            text-transform : none;
+                            font-family: "Dosis";
+                            font-weight: 200;
+                            color: white;
+                            padding: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            padding: 6px 0px 6px 10px;
+                            @media screen and (max-width: $width-phone-version) {
+                                padding-left: 40px;
+                            }
+                            font-size: 18px;
+                            @include transition(all, 0.1s, ease-in-out);
+                        }
+                        
+                        a:hover {
+                            color: white;
+                            background-color: $dark-blue;
+                            border: 0
+                        }
+                        
+                        .active {
+                            border: 0;
+                        }
+                    }
+                    @media screen and (max-width: $width-base - 1px) {
+                        li:nth-last-child(2), li:nth-last-child(1) {
+                            position: relative;
+                            top: auto;
+                            right: 0;
+                            
+                            a {
+                                background-color: $dark-blue-second;
+                                @include border-radius(0px, 0px, 0px, 0px);
+                                
+                                @media screen and (max-width: $width-phone-version) {
+                                    background-color: $blue;
+                                }
+                            }
+                            a:hover {
+                                background-color: $dark-blue;
+                            }
+                        }
+                    }
+                }
+                
+                .long-menu {
+                    @media screen and (min-width: $width-phone-version) {
+                        width: 125%;
+                        // left: -25%;
+                    }
+                }
+            }
+        }
+        
+        .authent {
+            display: block;
+            
+            @media screen and (min-width: $width-base) {
+                position: absolute;
+                right: 0;
+                top: -10px;
+            }
+            @media screen and (max-width: $width-phone-version) {
+                right: 0;
+                position: absolute;
+                top: 70px;
+                width: 250px;
+            }
+            
+            li {
+                list-style-type: none;
+                display: block;
+                margin-bottom: 10px;
+                text-align: right;
+                
+                
+                @media screen and (max-width: $width-phone-version) {
+                    display: inline;
+                    position: relative;
+                }
+                @media screen and (max-width: $width-base - 1px) {
+                    position: absolute;
+                    top: -50px;
+                    right: 3px;
+                }
+                a {
+                    @include border-radius(15px, 0px, 0px, 15px);
+                    padding: 2px 5px 2px 7px;
+                    background-color: $dark-blue;
+                    color: #fff;
+                    border: 0;
+                    font-size: 16px;
+                    
+                    @media screen and (max-width: $width-base - 1px) {
+                        @include border-radius(15px, 15px, 15px, 15px);
+                    }
+                    
+                    @media screen and (max-width: $width-phone-version) {
+                        text-transform: none;
+                        font-size: 15px;
+                    }
+                }
+                
+                a:hover {
+                    border: none;
+                }
+            }
+            //Bouton connexion
+            li:nth-last-child(2) {
+                
+                @media screen and (max-width: $width-base - 1px) {
+                    margin-right: 150px;
+                    
+                }
+                @media screen and (max-width: $width-phone-version) {
+                    margin-right: 110px;
+                }
+                a {
+                    background-color: $green;
+                }
+                .logout {
+                    background-color: $red;
+                }
+                
+                
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.recapitulatif{
+    font-size: 115%;
+    padding-bottom: 10px;
+    
+    p{
+        margin: 10px 10% 10px;
+        @media screen and (max-width: $width-phone-version) {
+            margin: 10px;
+        }
+        
+        a {
+            background-color: $orange;
+            color: #fff;
+            font-size: 85%;
+            padding: 5px;
+        }
+    }
+    
+    #new-search {
+        position: relative;
+        min-height: inherit;
+        width: 80%;
+        font-size: 110%;
+        margin: 0 10%;
+        @media screen and (max-width: $width-phone-version) {
+            line-height: 28px;
+            width: 100%;
+            margin: 0;
+        }
+        
+        .block-search {
+            padding: 1%;
+            margin: 1%;
+            
+            form {
+                
+                .block-search-input, .block-select-date {
+                    display: inline-block;
+                    width: 48%;
+                    margin-bottom: 0;
+                    margin-left: 1%;
+                    
+                    @media screen and (max-width: $width-phone-version) {
+                        width: 97%;
+                        
+                        label {
+                            font-size: 15px;
+                        }
+                    }
+                    
+                    
+                    div {
+                        margin-bottom: 5px;
+                    }
+                    
+                }
+                
+                .block-select-date div {
+                    width: auto;
+                    top: -31px;
+                    margin-right: 3%;
+                    @media screen and (max-width: $width-phone-version) {
+                        top: 0;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+    .fixedTopNav ~ #new-search {
+        position: fixed;
+        top: 40px;
+        z-index: 100;
+        @media screen and (max-width: $width-phone-version) {
+            margin-left: -25px;
+        }
+        
+    }
+    
+}
+
+.liste-lignes {
+    list-style-type: none;
+    
+    li {
+        a {
+            color: $blue;
+            font-size: 25px;
+        }
+    }
+}
